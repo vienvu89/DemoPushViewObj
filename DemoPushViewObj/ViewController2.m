@@ -34,7 +34,8 @@
 }
 */
 - (IBAction)back1Go3:(id)sender {
-    [self.delegate dismissAndPushView3:self];
+    [self.navigationController popViewControllerAnimated:YES];
+    [self.delegate dismissAndPushView3:self.navigationController];
 }
 
 @end

@@ -37,10 +37,10 @@
 }
 
 
-- (void)dismissAndPushView3:(UIViewController *)controller {
-    [controller dismissViewControllerAnimated:YES completion:^{
+- (void)dismissAndPushView3:(UINavigationController *)controller {
+//    [controller dismissViewControllerAnimated:YES completion:^{
         [self performSegueWithIdentifier:@"Go3" sender:nil];
-    }];
+//    }];
 }
 
 @end

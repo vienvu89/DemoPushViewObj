@@ -10,7 +10,7 @@
 
 @protocol ViewController2Delegate <NSObject>
 
-- (void)dismissAndPushView3:(UIViewController *)controller;
+- (void)dismissAndPushView3:(UINavigationController *)controller;
 
 @end
 

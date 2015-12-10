@@ -33,7 +33,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aQk-SM-ard"/>
                     <connections>
-                        <segue destination="NP2-pe-7fe" kind="presentation" identifier="Go2" id="9me-eh-9Mb"/>
+                        <segue destination="NP2-pe-7fe" kind="push" identifier="Go2" id="9me-eh-9Mb"/>
                         <segue destination="jXR-1b-UPT" kind="show" identifier="Go3" id="cbT-6r-ch3"/>
                     </connections>
                 </viewController>
@@ -71,7 +71,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUq-Hd-vuJ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUq-Hd-vuJ">
                                 <rect key="frame" x="236.5" y="40" width="127" height="30"/>
                                 <state key="normal" title="Back to 1 and go 3"/>
                                 <connections>
@@ -85,6 +85,7 @@
                             <constraint firstItem="pUq-Hd-vuJ" firstAttribute="top" secondItem="mg5-PS-94N" secondAttribute="bottom" constant="20" id="vPY-dP-sSY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="egY-gh-rx5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4a-69-dbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
