@@ -7,8 +7,10 @@
 //
 
 #import "ViewController2.h"
+#import "ViewController3.h"
 
 @interface ViewController2 ()
+
 
 @end
 
@@ -36,6 +38,16 @@
 - (IBAction)back1Go3:(id)sender {
     [self.navigationController popViewControllerAnimated:NO];
     [self.delegate dismissAndPushView3:self.navigationController];
+}
+- (IBAction)goStraight3:(id)sender {
+    [self performSegueWithIdentifier:@"Go2To3" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Go2To3"]) {
+        ViewController3 *controler = (ViewController3 *)segue.destinationViewController;
+        controler.backToRoot = YES;
+    }
 }
 
 @end

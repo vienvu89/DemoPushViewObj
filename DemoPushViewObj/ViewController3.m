@@ -34,4 +34,9 @@
 }
 */
 
+- (IBAction)backToRoot:(id)sender {
+    if (self.backToRoot) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+}
 @end

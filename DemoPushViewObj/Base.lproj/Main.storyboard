@@ -71,25 +71,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUq-Hd-vuJ">
-                                <rect key="frame" x="236.5" y="40" width="127" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUq-Hd-vuJ">
+                                <rect key="frame" x="236" y="84" width="127" height="30"/>
                                 <state key="normal" title="Back to 1 and go 3"/>
                                 <connections>
                                     <action selector="back1Go3:" destination="NP2-pe-7fe" eventType="touchUpInside" id="Xob-GW-uRh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHS-35-XYR">
+                                <rect key="frame" x="254" y="137" width="92" height="30"/>
+                                <state key="normal" title="Go Straight 3"/>
+                                <connections>
+                                    <action selector="goStraight3:" destination="NP2-pe-7fe" eventType="touchUpInside" id="Z5A-yu-3oZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="UHS-35-XYR" firstAttribute="top" secondItem="pUq-Hd-vuJ" secondAttribute="bottom" constant="23" id="MLg-e5-fvq"/>
                             <constraint firstItem="pUq-Hd-vuJ" firstAttribute="centerX" secondItem="QGm-xp-25s" secondAttribute="centerX" id="Rdh-Wk-7qD"/>
                             <constraint firstItem="pUq-Hd-vuJ" firstAttribute="top" secondItem="mg5-PS-94N" secondAttribute="bottom" constant="20" id="vPY-dP-sSY"/>
+                            <constraint firstItem="UHS-35-XYR" firstAttribute="centerX" secondItem="QGm-xp-25s" secondAttribute="centerX" id="xgN-K1-zUC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="egY-gh-rx5"/>
+                    <connections>
+                        <segue destination="jXR-1b-UPT" kind="show" identifier="Go2To3" id="bfp-sm-8Sv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4a-69-dbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1360" y="1151"/>
+            <point key="canvasLocation" x="1446" y="1156"/>
         </scene>
         <!--View Controller3-->
         <scene sceneID="dU9-mQ-Cyj">
@@ -106,6 +118,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU6-Nj-07P">
                                 <rect key="frame" x="269" y="105" width="62" height="30"/>
                                 <state key="normal" title="Screen 3"/>
+                                <connections>
+                                    <action selector="backToRoot:" destination="jXR-1b-UPT" eventType="touchUpInside" id="6OA-ap-NI0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -120,4 +135,7 @@
             <point key="canvasLocation" x="1633" y="345"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bfp-sm-8Sv"/>
+    </inferredMetricsTieBreakers>
 </document>
