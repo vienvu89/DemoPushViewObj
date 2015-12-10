@@ -11,6 +11,8 @@
 
 @interface ViewController ()<ViewController2Delegate>
 
+@property (assign , nonatomic) BOOL needPush;
+
 @end
 
 @implementation ViewController
@@ -18,6 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    if (self.needPush) {
+        [self performSegueWithIdentifier:@"Go3" sender:nil];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    self.needPush = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,8 +50,9 @@
 
 
 - (void)dismissAndPushView3:(UINavigationController *)controller {
+    self.needPush = YES;
 //    [controller dismissViewControllerAnimated:YES completion:^{
-        [self performSegueWithIdentifier:@"Go3" sender:nil];
+    
 //    }];
 }
 
